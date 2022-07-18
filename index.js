@@ -1,39 +1,38 @@
+import html2canvas from 'html2canvas';
 import Toastify from 'toastify-js';
-
-function slugify(string) {
-    return string
-        .toString()
-        .trim()
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/\-\-+/g, '-')
-        .replace(/^-+/, '')
-        .replace(/-+$/, '')
-        .replace(/-+@/, '')
-        .replace('<script>', 'script')
-        .replaceAll('.', '-')
-        .replace('(', '')
-        .replace(')', '');
-}
+import slugify from 'slugify';
 
 let url = new URL(window.location);
 let searchParams = new URLSearchParams(url.search);
-const getInput = searchParams.get('name') || window.location.hostname;
+const getInput = searchParams.get('name') || 'Your Name';
 const random_id = Math.floor(1000 + Math.random() * 9000);
 const basename = 'friendship-day-wishes-' + random_id;
-
-if (getInput == window.location.hostname) {
+const seo_title = slugify(getInput, {
+    replacement: '-',
+    remove: /[$*_+~.()'"!\-:@]+/g,
+    lower: false,
+    strict: false,
+});
+const userInput =
+  slugify(getInput, {
+      replacement: ' ',
+      remove: /[*+~.()'"!:@]/g,
+      lower: false,
+      strict: false,
+  }) || 'Your Name';
+const pageCatch = encodeURIComponent(seo_title).replace(/%20/g, '-');
+if (getInput == 'Your Name') {
     if (window.history.replaceState) {
         window.history.replaceState(null, null, '/');
     }
 } else {
     if (window.history.replaceState) {
-        window.history.replaceState(null, null, '/?name=' + slugify(getInput));
+        window.history.replaceState(null, null, '/?name=' + pageCatch);
     }
 }
-const userInput = getInput.replace(/[-]/g, ' ') || window.location.hostname;
+const word = userInput.replace(/[-]/g, ' ');
 Toastify({
-    text: userInput,
+    text: word,
     duration: 2000,
     close: true,
     gravity: 'bottom',
@@ -47,18 +46,18 @@ document
     .namedItem('description')
     .setAttribute(
         'content',
-        `${userInput} Sending you the Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image Generator.`
+        `${word} Sending you the Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image Generator.`
     );
-document.title = `${userInput} Sending you the Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image Generator.`;
+document.title = `${word} Sending you the Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image Generator.`;
 
-const link = document.querySelector('link[rel=\'canonical\']') ? document.querySelector('link[rel=\'canonical\']') : document.createElement('link');
+const link = document.querySelector('link[rel=\'canonical\']')
+    ? document.querySelector('link[rel=\'canonical\']')
+    : document.createElement('link');
 const pathname = typeof window !== 'undefined' ? window.location.href : '';
 link.setAttribute('rel', 'canonical');
 link.setAttribute('href', pathname);
 document.head.appendChild(link);
 
-console.log(userInput);
-const word = userInput;
 document.getElementById('notice').innerHTML = `<div class="container mx-md">
             <div class="flex items-center justify-center">
             <div id="copy-wish" class="p-1 shadow-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-1xl">

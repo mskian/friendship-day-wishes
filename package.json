@@ -40,6 +40,8 @@
     "tailwindcss": "^3.1.6"
   },
   "dependencies": {
+    "html2canvas": "^1.4.1",
+    "slugify": "^1.6.5",
     "toastify-js": "^1.11.2"
   }
 }
