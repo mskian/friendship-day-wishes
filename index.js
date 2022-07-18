@@ -74,16 +74,20 @@ document.getElementById('notice').innerHTML = `<div class="container mx-md">
           </div>
           </div>
           `;
-html2canvas(document.getElementById('copy-wish'), {
-    allowTaint: true,
-    useCORS: true,
-})
-    .then(function (canvas) {
-        let image = canvas.toDataURL('image/png');
-        document.getElementById(
-            'result'
-        ).innerHTML = `<br><div class="flex items-center justify-center"><a class="inline-block px-12 py-3 rounded text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 font-medium uppercase umami--click--download-image" href="${image}" download="${basename}">⬇ Download image</a></div>`;
+if (word == 'Your Name') {
+    console.log('Hello World');
+} else {
+    html2canvas(document.getElementById('copy-wish'), {
+        allowTaint: true,
+        useCORS: true,
     })
-    .catch((e) => {
-        console.log(e);
-    });
+        .then(function (canvas) {
+            let image = canvas.toDataURL('image/png');
+            document.getElementById(
+                'result'
+            ).innerHTML = `<br><div class="flex items-center justify-center"><a class="inline-block px-12 py-3 rounded text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 font-medium uppercase umami--click--download-image" href="${image}" download="${basename}">⬇ Download image</a></div>`;
+        })
+        .catch((e) => {
+            console.log(e);
+        });
+}
