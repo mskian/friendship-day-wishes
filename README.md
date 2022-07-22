@@ -1,6 +1,6 @@
 # Friendship Day Wishes image with Name
 
-⚡ Vitejs | ✨ Tailwind CSS | 📸 HTML Canvas  | 🌩 Cloudflare Pages
+⚡ Vitejs | ✨ Tailwind CSS | 📸 HTML Canvas  | 🎩 Alpine.js |🌩 Cloudflare Pages  
 
 Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image Generator.  
 
@@ -10,6 +10,7 @@ Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image
 - HTML Canvas - Create Wish image
 - tailwindcss - Front-end Styling
 - Vitejs - Testing, Bundling and Local Server
+- Alpine.js - For Javascript Magic
 - Eslint - Fix the Lint Error
 - Prettier - Beautify the Code files
 - Slugify - Slugify the User input and Convert to URL
