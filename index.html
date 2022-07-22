@@ -1,19 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="shortcut icon" href="/icon.png" type="image/png" />
-    <title>Free Happy Friendship Day Wishes image with Name Generator</title>
-    <meta name="description" content="Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image Generator." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="shortcut icon" href="/icon.png" type="image/png" />
+        <title>
+            Free Happy Friendship Day Wishes image with Name Generator
+        </title>
+        <meta
+            name="description"
+            content="Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image Generator."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    </head>
+    <body>
+        <div
+            class="min-h-screen px-4 py-16 mx-auto sm:px-6 lg:px-8 bg-gray-200"
+        >
+            <div class="max-w-lg mx-auto">
+                <div id="app"></div>
+                <div id="notice"></div>
+                <div id="result"></div>
+                <div x-data="{ color: '', quotes: ''}">
+                    <form
+                        method="get"
+                        accept-charset="UTF-8"
+                        class="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl"
+                        style="background-color: #94a3b8"
+                    >
+                        <div class="relative mt-1">
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                x-model="quotes"
+                                class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm text-lg"
+                                placeholder="Your Name"
+                                maxlength="40"
+                                autocomplete="off"
+                                required
+                            />
+                        </div>
+                        <div class="relative mt-1 rounded-lg">
+                            <select
+                                x-model="color"
+                                id="c"
+                                name="c"
+                                class="rounded-lg"
+                            >
+                                <option value="" disabled>
+                                    Background Color
+                                </option>
+                                <option value="#E9D5FF" selected>
+                                    Purple (Default)
+                                </option>
+                                <option value="#FEF08A">Yellow</option>
+                                <option value="#BBF7D0">Green</option>
+                            </select>
+                            <template x-if="color">
+                                <p
+                                    x-text="quotes"
+                                    :style="`background-color: ${color}; white-space: pre-line;`"
+                                    class="h-fit w-fit p-14 py-14 max-w-md mx-auto mt-4 text-center text-sm text-zinc-700 font-bold rounded-lg"
+                                ></p>
+                            </template>
+                        </div>
+                        <button
+                            type="submit"
+                            class="block w-full px-5 py-3 text-lg font-medium text-gray-700 bg-orange-200 rounded-lg"
+                        >
+                            Create Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <br />
+        </div>
+        <script type="module" src="/main.js"></script>
+    </body>
 </html>
