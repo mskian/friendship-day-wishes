@@ -20,7 +20,7 @@ Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image
 
 ## Installation 📦
 
-- Add funtions, logic's and Modules - `/lib/app.js`
+- Add funtions, logic's and Modules - `/lib/canva.js`
 - Edit Home page - `index.html`
 - CSS Styling - `/styles/tailwind.css`
 - Build file - `main.js`
