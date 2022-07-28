@@ -16,6 +16,7 @@ Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image
 - Eslint - Fix the Lint Error
 - Prettier - Beautify the Code files
 - Slugify - Slugify the User input and Convert to URL
+- Progressive Web App
 - Cloudflare Pages for Free Hosting - `npx wrangler pages publish dist --branch production`
 
 ## Installation 📦
