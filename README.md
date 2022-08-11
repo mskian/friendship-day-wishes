@@ -2,7 +2,7 @@
 
 [![build-script](https://github.com/mskian/friendship-day-wishes/actions/workflows/build.yml/badge.svg)](https://github.com/mskian/friendship-day-wishes/actions/workflows/build.yml)  
 
-⚡ Vitejs | ✨ Tailwind CSS | 📸 HTML Canvas  | 🎩 Alpine.js | 🌩 Cloudflare Pages  
+⚡ Vitejs | ✨ Tailwind CSS | 📸 HTML Canvas  | 🌩 Cloudflare Pages  
 
 Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image Generator.  
 
@@ -14,11 +14,9 @@ Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image
 - HTML Canvas - Create Wish image
 - tailwindcss - Front-end Styling
 - Vitejs - Testing, Bundling and Local Server
-- Alpine.js - For Javascript Magic
 - Eslint - Fix the Lint Error
 - Prettier - Beautify the Code files
 - Slugify - Slugify the User input and Convert to URL
-- Progressive Web App
 - Cloudflare Pages for Free Hosting - `npx wrangler pages publish dist --branch production`
 
 ## Installation 📦

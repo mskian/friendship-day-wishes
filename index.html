@@ -45,39 +45,35 @@
                             id="Canvas"
                             width="1080px"
                             height="1080px"
-                            style="border: 1px double black; margin-top: 1px"
                         ></canvas>
                     </div>
                 </div>
                 <div id="result"></div>
-                <div x-data="{ color: '', quotes: ''}">
-                    <form
-                        method="get"
-                        accept-charset="UTF-8"
-                        class="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl"
-                        style="background-color: #94a3b8"
+                <form
+                    method="get"
+                    accept-charset="UTF-8"
+                    class="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl"
+                    style="background-color: #94a3b8"
+                >
+                    <div class="relative mt-1">
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm text-lg"
+                            placeholder="Your Name"
+                            maxlength="30"
+                            autocomplete="off"
+                            required
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        class="block w-full px-5 py-3 text-lg font-medium text-gray-700 bg-orange-200 rounded-lg"
                     >
-                        <div class="relative mt-1">
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                x-model="quotes"
-                                class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm text-lg"
-                                placeholder="Your Name"
-                                maxlength="30"
-                                autocomplete="off"
-                                required
-                            />
-                        </div>
-                        <button
-                            type="submit"
-                            class="block w-full px-5 py-3 text-lg font-medium text-gray-700 bg-orange-200 rounded-lg"
-                        >
-                            Create Now
-                        </button>
-                    </form>
-                </div>
+                        Create Now
+                    </button>
+                </form>
             </div>
             <br />
         </div>
