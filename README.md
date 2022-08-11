@@ -1,5 +1,7 @@
 # Friendship Day Wishes image with Name
 
+[![build-script](https://github.com/mskian/friendship-day-wishes/actions/workflows/build.yml/badge.svg)](https://github.com/mskian/friendship-day-wishes/actions/workflows/build.yml)  
+
 ⚡ Vitejs | ✨ Tailwind CSS | 📸 HTML Canvas  | 🎩 Alpine.js | 🌩 Cloudflare Pages  
 
 Free Happy Friendship Day Wishes image with Name - Friendship Day Greeting image Generator.  
