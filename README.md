@@ -1,6 +1,6 @@
 # Friendship Day Wishes image with Name
 
-[![build-script](https://github.com/mskian/friendship-day-wishes/actions/workflows/build.yml/badge.svg)](https://github.com/mskian/friendship-day-wishes/actions/workflows/build.yml)  
+[![build-script](https://github.com/mskian/friendship-day-wishes/actions/workflows/build.yml/badge.svg)](https://github.com/mskian/friendship-day-wishes/actions/workflows/build.yml) [![cloudflare-pages](https://github.com/mskian/friendship-day-wishes/actions/workflows/deploy.yml/badge.svg)](https://github.com/mskian/friendship-day-wishes/actions/workflows/deploy.yml)  
 
 ⚡ Vitejs | ✨ Tailwind CSS | 📸 HTML Canvas  | 🌩 Cloudflare Pages  
 
